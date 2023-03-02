@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styled from 'styled-components';
+import Reset from './GlobalStyle/Reset';
+import GlobalStyle from './GlobalStyle/GlobalStyle';
+import Title from "./Title";
+import Questions from "./Questions"
+import Footer from "./Footer"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Reset/>
+    <GlobalStyle/>
+
+    <Zap>
+      <Title/>
+      <Questions/>
+    </Zap>
+    <Footer/>
+    </>
   );
 }
 
 export default App;
+
+const Zap = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #FB6B6B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 52px;
+`
