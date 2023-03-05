@@ -1,22 +1,27 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Reset from './GlobalStyle/Reset';
-import GlobalStyle from './GlobalStyle/GlobalStyle';
-import Title from "./Title";
-import Questions from "./Questions"
-import Footer from "./Footer"
+import Title from "./components/Title";
+import Questions from "./components/Questions"
+import Footer from "./components/Footer"
+import CARDS from "./components/cards"
 
 function App() {
+  const [contador, setContador] = useState(0)
+
+
   return (
     <>
-    <Reset/>
-    <GlobalStyle/>
-
     <Zap>
       <Title/>
-      <Questions/>
+      <Questions
+      cards={CARDS}
+      contador={contador}
+      setContador={setContador}
+      />
     </Zap>
-    <Footer/>
+    <Footer
+    contador={contador}
+    setContador={setContador}/>
     </>
   );
 }
