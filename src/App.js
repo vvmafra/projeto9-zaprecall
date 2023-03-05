@@ -20,6 +20,7 @@ function App() {
       />
     </Zap>
     <Footer
+    cards={CARDS}
     contador={contador}
     setContador={setContador}/>
     </>

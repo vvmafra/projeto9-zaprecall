@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export default function Footer() {
+export default function Footer({contador,cards}) {
 
 
     return (
         <>
-            <DivFooter>?/? CONCLUÍDOS</DivFooter>
+            <DivFooter>{contador}/{cards.length} CONCLUÍDOS</DivFooter>
         </>
     )
 }

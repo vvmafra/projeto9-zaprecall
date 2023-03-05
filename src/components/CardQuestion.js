@@ -120,7 +120,7 @@ const Question = styled.div`
     display: flex;
     flex-direction: ${props => props.typeCard === 2 ? "column" : "row"};
     justify-content: space-between;
-    padding: 10px;
+    padding: 16px;
     box-sizing: border-box;
     align-items: center;
     margin-bottom: 32px;
