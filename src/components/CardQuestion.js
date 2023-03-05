@@ -86,7 +86,7 @@ export default function CardQuestion({card, contador, setContador}) {
                 <img 
                     src={buttonOnclick} 
                     onClick={clickPlay}
-                    data-test="play-btn"/>
+                    data-test={dataTestButton}/>
 
             <ContainerOptions
             typeCard={typeCard}>
