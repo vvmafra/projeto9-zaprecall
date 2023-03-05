@@ -5,7 +5,7 @@ export default function Footer({contador,cards}) {
 
     return (
         <>
-            <DivFooter>{contador}/{cards.length} CONCLUÍDOS</DivFooter>
+            <DivFooter><div data-test="footer">{contador}/{cards.length} CONCLUÍDOS</div></DivFooter>
         </>
     )
 }

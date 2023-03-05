@@ -9,21 +9,24 @@ import setaVirar from "../images/seta_virar.png"
 
 
 export default function CardQuestion({card, contador, setContador}) {
+
     const {number, question, answer} = card
     const [typeCard, setTypeCard] = useState(0)
     const [colorBackground, setColorBackground] = useState("#FFFFFF")
     const [heightQuestion, setHeightQuestion] = useState("65px")
     const [buttonOnclick, setButtonOnclick] = useState(setaPlay)
+    const [dataTestButton, setdataTestButton] = useState("play-btn")
 
     console.log(contador)
 
     function clickPlay() {
         if (typeCard === 0) {
-            console.log("oi")
             setTypeCard(1)
             setColorBackground("#FFFFD4")
             setHeightQuestion("130px")
             setButtonOnclick(setaVirar)
+            setdataTestButton("turn-btn")
+
         } else if (typeCard === 1) {
             setTypeCard(2)
             setButtonOnclick()
@@ -72,37 +75,41 @@ export default function CardQuestion({card, contador, setContador}) {
     
 
     return (
-        <>
+        <div data-test="flashcard">
             <Question
             typeCard={typeCard}
             colorBackground={colorBackground}
             heightQuestion={heightQuestion}
             contador={contador}
             setContador={setContador}
-            > {questionText()}
+            > <div data-test="flashcard-text">{questionText()}</div>
                 <img 
                     src={buttonOnclick} 
-                    onClick={clickPlay}/>
+                    onClick={clickPlay}
+                    data-test="play-btn"/>
 
             <ContainerOptions
             typeCard={typeCard}>
 
             <BoxOptions1
             typeCard={typeCard}
-            onClick={clickNaoLembrei}>Não lembrei</BoxOptions1>
+            onClick={clickNaoLembrei}
+            data-test="no-btn">Não lembrei</BoxOptions1>
 
             <BoxOptions2
             typeCard={typeCard}
-            onClick={clickQuaseNaoLembrei}>Quase não lembrei</BoxOptions2>
+            onClick={clickQuaseNaoLembrei}
+            data-test="no-btn">Quase não lembrei</BoxOptions2>
 
             <BoxOptions3
             typeCard={typeCard}
-            onClick={clickLembrei}>Zap!</BoxOptions3>
+            onClick={clickLembrei}
+            data-test="no-btn">Zap!</BoxOptions3>
 
             </ContainerOptions>
 
             </Question>
-        </>
+        </div>
 
     )
 }
