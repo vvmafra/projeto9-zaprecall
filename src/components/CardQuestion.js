@@ -90,21 +90,27 @@ export default function CardQuestion({card, contador, setContador}) {
 
             <ContainerOptions
             typeCard={typeCard}>
-
+            
+            <div data-test="no-btn">
             <BoxOptions1
             typeCard={typeCard}
             onClick={clickNaoLembrei}
-            data-test="no-btn">Não lembrei</BoxOptions1>
+            >Não lembrei</BoxOptions1>
+            </div>
 
+            <div data-test="no-btn">
             <BoxOptions2
             typeCard={typeCard}
             onClick={clickQuaseNaoLembrei}
             data-test="no-btn">Quase não lembrei</BoxOptions2>
+            </div>
 
+            <div data-test="no-btn">
             <BoxOptions3
             typeCard={typeCard}
             onClick={clickLembrei}
             data-test="no-btn">Zap!</BoxOptions3>
+            </div>
 
             </ContainerOptions>
 
