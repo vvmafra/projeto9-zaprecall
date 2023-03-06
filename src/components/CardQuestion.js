@@ -102,18 +102,18 @@ export default function CardQuestion({card, contador, setContador}) {
             >Não lembrei</BoxOptions1>
             </div>
 
-            <div data-test="no-btn">
+            <div data-test="partial-btn">
             <BoxOptions2
             typeCard={typeCard}
             onClick={clickQuaseNaoLembrei}
-            data-test="no-btn">Quase não lembrei</BoxOptions2>
+            >Quase não lembrei</BoxOptions2>
             </div>
 
-            <div data-test="no-btn">
+            <div data-test="zap-btn">
             <BoxOptions3
             typeCard={typeCard}
             onClick={clickLembrei}
-            data-test="no-btn">Zap!</BoxOptions3>
+            >Zap!</BoxOptions3>
             </div>
 
             </ContainerOptions>
