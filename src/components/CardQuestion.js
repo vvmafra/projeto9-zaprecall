@@ -86,10 +86,11 @@ export default function CardQuestion({card, contador, setContador}) {
             contador={contador}
             setContador={setContador}
             > <div data-test="flashcard-text">{questionText()}</div>
-                <img 
+                <img
+                    data-test={dataTestButton} 
                     src={buttonOnclick} 
                     onClick={clickPlay}
-                    data-test={dataTestButton}/>
+                    />
 
             <ContainerOptions
             typeCard={typeCard}>
