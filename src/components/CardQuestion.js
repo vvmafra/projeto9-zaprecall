@@ -51,6 +51,7 @@ export default function CardQuestion({card, contador, setContador}) {
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeErrado)
+        setdataTestButton("no-icon")
 }
 
     function clickQuaseNaoLembrei(){
@@ -60,6 +61,7 @@ export default function CardQuestion({card, contador, setContador}) {
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeQuase)
+        setdataTestButton("partial-icon")
 }
 
     function clickLembrei(){
@@ -69,6 +71,7 @@ export default function CardQuestion({card, contador, setContador}) {
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeCerto)
+        setdataTestButton("zap-icon")
     }
 
 
