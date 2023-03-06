@@ -15,7 +15,7 @@ export default function CardQuestion({card, contador, setContador}) {
     const [colorBackground, setColorBackground] = useState("#FFFFFF")
     const [heightQuestion, setHeightQuestion] = useState("65px")
     const [buttonOnclick, setButtonOnclick] = useState(setaPlay)
-    const [dataTestButton, setdataTestButton] = useState("play-btn")
+    const [dataTestButton, setDataTestButton] = useState("play-btn")
 
     console.log(contador)
 
@@ -25,7 +25,7 @@ export default function CardQuestion({card, contador, setContador}) {
             setColorBackground("#FFFFD4")
             setHeightQuestion("130px")
             setButtonOnclick(setaVirar)
-            setdataTestButton("turn-btn")
+            setDataTestButton("turn-btn")
 
         } else if (typeCard === 1) {
             setTypeCard(2)
@@ -45,33 +45,33 @@ export default function CardQuestion({card, contador, setContador}) {
     } 
 
     function clickNaoLembrei(){
+        setDataTestButton("no-icon")
         let novoContagem = contador + 1;
         setContador(novoContagem)
         setTypeCard(3)
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeErrado)
-        setdataTestButton("no-icon")
 }
 
     function clickQuaseNaoLembrei(){
+        setDataTestButton("partial-icon")
         let novoContagem = contador + 1;
         setContador(novoContagem)
         setTypeCard(4)
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeQuase)
-        setdataTestButton("partial-icon")
 }
 
     function clickLembrei(){
+        setDataTestButton("zap-icon")
         let novoContagem = contador + 1;
         setContador(novoContagem)
         setTypeCard(5)
         setColorBackground("#FFFFFF")
         setHeightQuestion("65px")
         setButtonOnclick(iconeCerto)
-        setdataTestButton("zap-icon")
     }
 
 
